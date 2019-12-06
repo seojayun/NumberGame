@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+<!--    android:padding="10dp"  부모의 공간을 떨어트림 -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:textColor="#ff00ff"
+        android:text="1부터 100사이의 숫자를 맞추는 게임"/>
+
+    <EditText
+        android:id="@+id/edtMyNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+        android:gravity="center"
+        android:hint="숫자입력"/>
+    //android:inputType="number"  숫자만 입력되게 하는 명령어
+    //android:gravity="center"  부모가 되어 텍스트커서가 중간에 오도록한다.
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/btnGamaeStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="게임시작"/>
+
+        <Button
+            android:id="@+id/btnResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="결과확인"/>
+        //android:enabled="false" 이 버튼을 잠궈서 게임시작버튼이 먼저 누르고 시작하게 유도
+        //->메인자바페이지 10번
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvhint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textColor="#ff0f0f"
+        android:text="게임시작 버튼을 누르면 게임이 시작됩니다."/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imagame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:src="@drawable/number" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+<!--android:src="@drawable/number" />-->
+<!--이미지 불러오기-->
